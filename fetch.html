@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch</title>
+</head>
+<body>
+    <script>
+        fetch("https://kishan80090.github.io/jsondata3/data3.json")
+        .then(r=>r.json())
+        .then(data=>console.log("Fetched : ",data))
+        .catch(error=>console.error("Fetched : ",error))
+    </script>
+</body>
+</html>
