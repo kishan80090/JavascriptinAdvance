@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Set_Time</title>
+    <style>
+        img{
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <img id="slider" src="./pic/0image.jpg">
+    <script>
+        let images = [
+            "./pic/0image.jpg",
+            "./pic/1image.jpg",
+            "./pic/2image.jpg",
+            "./pic/3image.jpg"
+        ];
+        let index = 0;
+        function changeImage(){
+            index++;
+            if(index >= images.length){
+                index = 0;
+            }
+            document.getElementById("slider").src = images[index];
+            setTimeout(changeImage,2000);
+        }
+        setTimeout(changeImage,2000);
+    </script>
+</body>
+</html>
