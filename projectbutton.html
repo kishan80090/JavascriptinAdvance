@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Quiz</title>
+  <style>
+    button{
+      margin: 5px;
+      padding: 6px 12px;
+      cursor: pointer;
+    }
+    .correct{
+      color: green;
+      font-weight: bold;
+    }
+    .incorrect{
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+<div id="result"></div>
+
+<script>
+let questions = [
+  {
+    question: "What is C?",
+    options: ["Programming Language", "Game", "Movie"],
+    correct: 0
+  },
+  {
+    question: "What is C++?",
+    options: ["Browser", "Programming Language", "OS"],
+    correct: 1
+  }
+];
+
+let result = document.getElementById("result");
+
+for (let i = 0; i < questions.length; i++) {
+
+  // question
+  let p = document.createElement("p");
+  p.innerText = (i + 1) + ". " + questions[i].question;
+  result.appendChild(p);
+
+  // answer text
+  let ans = document.createElement("p");
+  result.appendChild(ans);
+
+  // options
+  for (let j = 0; j < questions[i].options.length; j++) {
+    let btn = document.createElement("button");
+    btn.innerText = questions[i].options[j];
+
+    btn.onclick = function () {
+      if (j === questions[i].correct) {
+        ans.innerText = "✔ Correct";
+        ans.className = "correct";
+      } else {
+        ans.innerText = "❌ Incorrect";
+        ans.className = "incorrect";
+      }
+    };
+    result.appendChild(btn);
+  }
+  result.appendChild(document.createElement("hr"));
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+[
+    {
+        "ques_no": "1",
+        "question": "What does SQL stand for?",
+        "a": "Structured Query List",
+        "b": "Simple Query Language",
+        "c": "Structured Query Language",
+        "d": "Sample Query Language",
+        "correct": "c",
+        "answer": "e"
+    },
+    {
+        "ques_no": "2",
+        "question": "Which SQL statement is used to extract data from a database?",
+        "a": "GET",
+        "b": "OPEN",
+        "c": "EXTRACT",
+        "d": "SELECT",
+        "correct": "d",
+        "answer": "e"
+    },
+    {
+        "ques_no": "3",
+        "question": "Which command is used to remove all records from a table?",
+        "a": "REMOVE",
+        "b": "DELETE",
+        "c": "ERASE",
+        "d": "DROP",
+        "correct": "b",
+        "answer": "e"
+    },
+    {
+        "ques_no": "4",
+        "question": "What is the default sorting order of the ORDER BY clause?",
+        "a": "Descending",
+        "b": "Random",
+        "c": "Ascending",
+        "d": "None",
+        "correct": "c",
+        "answer": "e"
+    },
+    {
+        "ques_no": "5",
+        "question": "Which SQL keyword is used to fetch only unique values?",
+        "a": "UNIQUE",
+        "b": "DISTINCT",
+        "c": "ONLY",
+        "d": "DIFFERENT",
+        "correct": "b",
+        "answer": "e"
+    },
+    {
+        "ques_no": "6",
+        "question": "Which of the following is a valid SQL data type?",
+        "a": "String",
+        "b": "Integer",
+        "c": "number",
+        "d": "VARCHAR",
+        "correct": "d",
+        "answer": "e"
+    },
+    {
+        "ques_no": "7",
+        "question": "Which SQL function is used to count the number of rows?",
+        "a": "SUM()",
+        "b": "COUNT()",
+        "c": "TOTAL()",
+        "d": "NUMBER()",
+        "correct": "b",
+        "answer": "e"
+    },
+    {
+        "ques_no": "8",
+        "question": "Which keyword is used with SELECT to filter records?",
+        "a": "IF",
+        "b": "WHERE",
+        "c": "FILTER",
+        "d": "CHECK",
+        "correct": "b",
+        "answer": "e"
+    },
+    {
+        "ques_no": "9",
+        "question": "Which SQL command is used to create a new table?",
+        "a": "MAKE TABLE",
+        "b": "NEW TABLE",
+        "c": "CREATE TABLE",
+        "d": "ADD TABLE",
+        "correct": "c",
+        "answer": "e"
+    },
+    {
+        "ques_no": "10",
+        "question": "Which clause is used to group rows with the same values?",
+        "a": "COLLECT BY",
+        "b": "GROUP BY",
+        "c": "SORT BY",
+        "d": "ORDER BY",
+        "correct": "b",
+        "answer": "e"
+    }
+]

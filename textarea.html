@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatting</title>
+    <style>
+        
+        .tex{
+            width: 200px;
+            height: 50px;
+        }
+        .butt{
+            width: 100px;
+            height: 30px;
+        }
+        .int
+        {
+            width: 180px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+
+        <h1>Enter the Message</h1>
+
+    <input class="int" type="text" id="t" placeholder="Enter the message.."></input><br><br>
+    <input class="butt" type="submit" onclick="chatting()"></input><br><br>
+    <textarea class="tex" id="result" ></textarea>
+    </center>
+
+    <script>
+
+        function chatting()
+        {
+
+            let a=(document.getElementById("t").value);
+            document.getElementById("result").value=a;
+
+        }
+    </script>
+    
+</body>
+</html>             

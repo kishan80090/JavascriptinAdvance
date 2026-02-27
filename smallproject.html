@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Project</title>
+</head>
+<body>
+
+  <input type="number" id="num" placeholder="Enter number">
+  <button onclick="check()">Check</button>
+
+  <p id="result"></p>
+
+  <script>
+    function check() {
+      let n = Number(document.getElementById("num").value);
+      let res = document.getElementById("result");
+      
+      switch (n % 2) {
+        case 0:
+          res.textContent = "Even Number";
+          break;
+        case 1:
+          res.textContent = "Odd Number";
+          break;
+        default:
+          res.textContent = "Please enter a valid number";
+      }
+    }
+  </script>
+</body>
+</html>

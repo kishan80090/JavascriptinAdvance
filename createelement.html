@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>createElement</title>
+</head>
+<body>
+   <div id="output" ></div>
+    <script>
+let questions = [
+  {
+    question: "What is C language?",
+    options: [
+      "Programming language",
+      "Markup language",
+      "Database language",
+      "Scripting language"
+    ],
+    correct: 0
+  },
+  {
+    question: "Which data type is used to store integers in C?",
+    options: [
+      "float",
+      "char",
+      "int",
+      "double"
+    ],
+    correct: 2
+  },
+  {
+    question: "Who developed C language?",
+    options: [
+      "Dennis Ritchie",
+      "James Gosling",
+      "Bjarne Stroustrup",
+      "Guido van Rossum"
+    ],
+    correct: 0
+  },
+]; 
+     
+  let out = document.getElementById("output");
+
+  for (let i = 0; i < questions.length; i++) {
+    let pre = document.createElement("pre");
+    pre.innerText = JSON.stringify(questions[i], null, 2);
+    out.appendChild(pre);
+  }
+   </script>
+</body>
+</html>

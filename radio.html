@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Positive Negative Zero</title>
+</head>
+<body>
+
+  <h3>Number Enter</h3>
+  <input type="number" id="num" oninput="checkNumber()" />
+
+  <h3>Result</h3>
+  <label>
+    <input type="radio" name="result" id="positive">
+    Positive
+  </label><br>
+
+  <label>
+    <input type="radio" name="result" id="negative">
+    Negative
+  </label><br>
+
+  <label>
+    <input type="radio" name="result" id="zero">
+    Zero
+  </label>
+
+  <script>
+    function checkNumber() {
+      const value = Number(document.getElementById("num").value);
+
+      document.getElementById("positive").checked = false;
+      document.getElementById("negative").checked = false;
+      document.getElementById("zero").checked = false;
+      
+      if (value > 0) {
+        document.getElementById("positive").checked = true;
+      } else if (value < 0) {
+        document.getElementById("negative").checked = true;
+      } else if (value === 0) {
+        document.getElementById("zero").checked = true;
+      }
+    }
+  </script>
+</body>
+</html>
