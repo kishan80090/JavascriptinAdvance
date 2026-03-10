@@ -2,33 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Set_Time</title>
-    <style>
-        img{
-            width: 200px;
-            height: 200px;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Process</title>
 </head>
 <body>
-    <img id="slider" src="./pic/0image.jpg">
+
+    <img id="f" src="pic/1image.jpg" width="300" height="200">
     <script>
-        let images = [
-            "./pic/0image.jpg",
-            "./pic/1image.jpg",
-            "./pic/2image.jpg",
-            "./pic/3image.jpg"
-        ];
+        let images = ["pic/0image.jpg","pic/1image.jpg","pic/2image.jpg","pic/3image.jpg"];
         let index = 0;
-        function changeImage(){
+
+        setInterval(Data,1000);
+
+        function Data()
+        {
+            document.getElementById("f").src=images[index];
             index++;
-            if(index >= images.length){
+
+            if (index==images.length) 
+            {
                 index = 0;
             }
-            document.getElementById("slider").src = images[index];
-            setTimeout(changeImage,2000);
-        }
-        setTimeout(changeImage,2000);
+        }; 
     </script>
 </body>
 </html>
