@@ -1,0 +1,1145 @@
+<html lang="en" class="scroll-smooth"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Private Flight | Luxury Experience</title>
+<meta name="description" content="Experience tailored, luxurious flights.">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
+<style>
+body {
+font-family: 'Inter', sans-serif;
+font-feature-settings: "cv11", "ss01";
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+background-color: #000000;
+color: #ffffff;
+overflow-x: hidden;
+}
+::-webkit-scrollbar {
+width: 6px;
+}
+::-webkit-scrollbar-track {
+background: #000000;
+}
+::-webkit-scrollbar-thumb {
+background: #27272a;
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #3f3f46;
+}
+.glass-panel {
+background: rgba(24, 24, 27, 0.65);
+backdrop-filter: blur(16px);
+border: 1px solid rgba(255, 255, 255, 0.05);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+#pill-header-bg {
+transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link {
+position: relative;
+}
+.nav-link::after {
+content: '';
+position: absolute;
+bottom: -4px;
+left: 0;
+width: 100%;
+height: 1px;
+background-color: #d97706; 
+transform: scaleX(0);
+transform-origin: right;
+transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.nav-link:hover::after {
+transform: scaleX(1);
+transform-origin: left;
+}
+@keyframes fadeInUp {
+from { opacity: 0; transform: translateY(15px); }
+to { opacity: 1; transform: translateY(0); }
+}
+.animate-enter {
+animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+opacity: 0;
+}
+.modal-open { overflow: hidden; }
+#booking-overlay { transition: opacity 0.3s ease, visibility 0.3s ease; }
+#booking-overlay.open { opacity: 1; visibility: visible; }
+#booking-overlay.closed { opacity: 0; visibility: hidden; pointer-events: none; }
+#booking-panel { transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+#booking-overlay.open #booking-panel { transform: translateX(0); }
+#booking-overlay.closed #booking-panel { transform: translateX(100%); }
+#mobile-menu { transition: opacity 0.3s ease, visibility 0.3s ease; }
+#mobile-menu.open { opacity: 1; visibility: visible; }
+#mobile-menu.closed { opacity: 0; visibility: hidden; pointer-events: none; }
+.journey-content-panel { will-change: transform, opacity; transition: transform 900ms cubic-bezier(.22, 1, .36, 1), opacity 900ms cubic-bezier(.22, 1, .36, 1); }
+
+#pill-header-bg.liquid-pill {
+position: relative;
+overflow: hidden;
+background: rgba(15, 15, 15, 0.55);
+-webkit-backdrop-filter: blur(22px) saturate(180%);
+backdrop-filter: blur(22px) saturate(180%);
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4), 0 1px 0 rgba(255, 255, 255, 0.05) inset;
+}
+#pill-header-bg.liquid-pill::before {
+content: "";
+position: absolute;
+inset: -2px;
+pointer-events: none;
+background: radial-gradient(120% 80% at 10% 0%, rgba(255, 255, 255, 0.1) 0%, transparent 55%), radial-gradient(90% 120% at 90% 100%, rgba(255, 255, 255, 0.05) 0%, transparent 60%);
+opacity: 0.8;
+}
+#pill-header-bg.liquid-pill.is-scrolled {
+background: rgba(10, 10, 10, 0.85);
+border-color: rgba(255, 255, 255, 0.12);
+box-shadow: 0 22px 55px rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.08) inset;
+}
+.line-clamp-2 {
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+overflow: hidden;
+}
+
+#chatBody::-webkit-scrollbar { width: 4px; }
+#chatBody::-webkit-scrollbar-thumb { background: #3f3f46; border-radius: 4px; }
+</style>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2M6V79H761"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-2M6V79H761');
+</script>
+
+</head>
+
+<body class="selection:bg-amber-500/30 selection:text-amber-200 relative text-zinc-200">
+
+  
+  <div class="fixed z-[60] flex flex-col gap-3 pointer-events-none right-6 bottom-6 items-end"></div>
+
+  
+  <header class="fixed top-0 left-0 w-full z-50 pointer-events-none">
+    <div class="flex pt-5 px-4 justify-center">
+      <div id="pill-header-bg" class="pointer-events-auto w-full max-w-[1240px] h-[64px] md:h-[72px] rounded-full relative transition-all px-2 md:pl-6 md:pr-2 liquid-pill">
+        
+        <div class="md:hidden h-full grid grid-cols-3 items-center">
+          <div class="flex items-center justify-start">
+            <a href="#cars" class="h-10 px-4 rounded-full bg-amber-500 text-black text-base font-medium flex items-center justify-center shadow-lg shadow-black/50 hover:bg-amber-400 transition-colors">
+              Book Now
+            </a>
+          </div>
+          <div class="flex items-center justify-center">
+            <a href="#" class="flex items-center justify-center text-xl font-light tracking-tight text-white">
+              AEROLUXE
+            </a>
+          </div>
+          <div class="flex items-center justify-end gap-2">
+            <a href="https://wa.me/123" class="w-10 h-10 flex items-center justify-center rounded-full border transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500/50 bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-amber-500 hover:border-amber-500/30 hover:bg-zinc-800" aria-label="Contact">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+            <button type="button" onclick="toggleMobileMenu()" class="w-10 h-10 flex items-center justify-center rounded-full border transition-colors focus:outline-none focus:ring-2 focus:ring-amber-500/50 border-zinc-800 hover:bg-zinc-800 text-zinc-400" aria-label="Open menu">
+              <i data-lucide="menu" class="w-5 h-5"></i>
+            </button>
+          </div>
+        </div>
+
+        
+        <div class="hidden md:flex h-full items-center justify-between">
+          <a href="#" class="flex items-center gap-3 focus:outline-none focus:ring-2 focus:ring-amber-500/50 rounded-full py-2 px-3 text-xl font-light tracking-tight text-white">
+            AEROLUXE
+          </a>
+
+          <nav class="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8">
+            <a href="#cars" class="nav-link text-base font-normal transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-amber-500/50 rounded-md text-zinc-400 hover:text-white uppercase tracking-wider text-sm">Aeroplanes</a>
+            <a href="#imola" class="nav-link text-base font-normal transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-amber-500/50 rounded-md text-zinc-400 hover:text-white uppercase tracking-wider text-sm">Services</a>
+            <a href="#local" class="nav-link text-base font-normal transition-colors py-2 focus:outline-none focus:ring-2 focus:ring-amber-500/50 rounded-md text-zinc-400 hover:text-white uppercase tracking-wider text-sm">Blog</a>
+          </nav>
+
+          <div class="flex items-center gap-2 md:gap-3">
+            <button class="hidden md:flex items-center gap-2 h-10 px-4 rounded-full border border-transparent text-sm font-normal transition-all focus:outline-none focus:ring-2 focus:ring-amber-500/50 hover:border-zinc-800 hover:bg-zinc-900 text-zinc-400 hover:text-white" aria-label="Change Language">
+              <i data-lucide="globe" class="w-4 h-4"></i>
+              <span>EN</span>
+            </button>
+            <a href="javascript:void(0)" onclick="toggleChat()" class="w-10 h-10 md:w-11 md:h-11 flex items-center justify-center rounded-full border transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-amber-500/50 bg-zinc-900 border-zinc-800 text-zinc-400 hover:text-amber-500 hover:border-amber-500/30 hover:bg-zinc-800" aria-label="Contact">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+            <a href="javascript:void(0)" onclick="openBooking()" class="md:h-11 md:px-7 hover:-translate-y-0.5 transition-all flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 hover:bg-amber-400 text-base font-medium text-black bg-amber-500 h-10 rounded-full pr-5 pl-5 shadow-lg shadow-black/50">
+              <span>Book</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  
+  <div id="mobileMenu" class="hidden lg:hidden fixed inset-0 z-[60] opacity-0 pointer-events-none ease-out">
+    <button id="mobileMenuBackdrop" type="button" class="absolute inset-0 w-full h-full bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-300 ease-out" onclick="toggleMobileMenu(false)" aria-label="Close menu"></button>
+    <div id="mobileMenuPanel" class="absolute top-0 right-0 z-[61] h-[100dvh] w-[min(420px,100%)] rounded-none sm:rounded-l-3xl bg-zinc-950/95 backdrop-blur-xl border-l border-zinc-800 shadow-2xl p-5 pt-[max(1.25rem,env(safe-area-inset-top))] pb-[max(1.25rem,env(safe-area-inset-bottom))] opacity-0 translate-x-6 scale-[0.985] transition-[transform,opacity] duration-500 ease-[cubic-bezier(.22,1,.36,1)] will-change-transform">
+      <div class="flex items-center justify-between px-2 pb-2">
+        <span class="text-base font-medium text-white">Menu</span>
+        <button type="button" class="w-10 h-10 rounded-full border border-zinc-800 hover:bg-zinc-900 text-zinc-400 flex items-center justify-center" onclick="toggleMobileMenu(false)" aria-label="Close menu">
+          <i data-lucide="x" class="w-5 h-5"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-1 p-2">
+        <a href="#cars" class="px-4 py-3 rounded-xl hover:bg-zinc-900 text-base font-normal text-white uppercase tracking-wider text-sm">Aeroplanes</a>
+        <a href="#imola" class="px-4 py-3 rounded-xl hover:bg-zinc-900 text-base font-normal text-white uppercase tracking-wider text-sm">Services</a>
+        <a href="#local" class="px-4 py-3 rounded-xl hover:bg-zinc-900 text-base font-normal text-white uppercase tracking-wider text-sm">Blog</a>
+        <div class="mt-2 pt-3 border-t border-zinc-800 flex gap-2">
+          <a href="javascript:void(0)" onclick="toggleChat(); toggleMobileMenu(false);" class="flex-1 px-4 py-3 rounded-xl border border-zinc-800 hover:bg-zinc-900 text-base font-medium text-center text-white">
+            Concierge
+          </a>
+          <a href="javascript:void(0)" onclick="openBooking(); toggleMobileMenu(false);" class="flex-1 px-4 py-3 rounded-xl bg-amber-500 text-black hover:bg-amber-400 text-base font-medium text-center">
+            Book
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <script class="">
+    (function () {
+      const html = document.documentElement;
+      const $ = (id) => document.getElementById(id);
+      function getMenu()     { return $("mobileMenu"); }
+      function getBackdrop() { return $("mobileMenuBackdrop"); }
+      function getPanel()    { return $("mobileMenuPanel"); }
+      function setMenuOpen(open) {
+        const menu = getMenu();
+        const backdrop = getBackdrop();
+        const panel = getPanel();
+        if (!menu || !backdrop || !panel) return;
+        if (menu.__hideTimer) clearTimeout(menu.__hideTimer);
+        if (open) {
+          menu.classList.remove("hidden");
+          menu.classList.remove("pointer-events-none");
+          menu.classList.add("pointer-events-auto");
+          html.classList.add("overflow-hidden");
+          requestAnimationFrame(() => {
+            menu.classList.remove("opacity-0");
+            menu.classList.add("opacity-100");
+            backdrop.classList.remove("opacity-0");
+            backdrop.classList.add("opacity-100");
+            panel.classList.remove("opacity-0", "translate-x-6", "scale-[0.985]");
+            panel.classList.add("opacity-100", "translate-x-0", "scale-100");
+          });
+        } else {
+          menu.classList.remove("opacity-100");
+          menu.classList.add("opacity-0");
+          backdrop.classList.remove("opacity-100");
+          backdrop.classList.add("opacity-0");
+          panel.classList.remove("opacity-100", "translate-x-0", "scale-100");
+          panel.classList.add("opacity-0", "translate-x-6", "scale-[0.985]");
+          menu.classList.remove("pointer-events-auto");
+          menu.classList.add("pointer-events-none");
+          html.classList.remove("overflow-hidden");
+          menu.__hideTimer = setTimeout(() => {
+            menu.classList.add("hidden");
+          }, 520);
+        }
+      }
+      window.toggleMobileMenu = function (force) {
+        const menu = getMenu();
+        if (!menu) return;
+        const open = (typeof force === "boolean") ? force : menu.classList.contains("hidden");
+        setMenuOpen(open);
+      };
+      function closeOnMenuLink(e) {
+        const menu = getMenu();
+        if (!menu || menu.classList.contains("hidden")) return;
+        const link = e.target.closest("a");
+        if (!link || !menu.contains(link)) return;
+        const href = link.getAttribute("href") || "";
+        setMenuOpen(false);
+        if (href.startsWith("#")) {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          requestAnimationFrame(() => {
+            target?.scrollIntoView({ behavior: "smooth", block: "start" });
+            history.replaceState(null, "", href);
+          });
+        }
+      }
+      document.addEventListener("click", closeOnMenuLink, true);
+      document.addEventListener("pointerup", closeOnMenuLink, true);
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") setMenuOpen(false);
+      });
+    })();
+  </script>
+
+  <main class="">
+    <section class="min-h-[100dvh] flex overflow-hidden bg-black w-full relative items-center">
+      <div class="z-0 absolute top-0 right-0 bottom-0 left-0">
+        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/743328d0-b3e6-4fce-adca-dbcbfbc3c19d_3840w.jpg" alt="Luxury Aviation" class="opacity-60 w-full h-full object-cover z-20">
+        <div class="absolute inset-0 bg-gradient-to-r to-transparent from-black via-black/90"></div>
+        <div class="bg-gradient-to-t via-transparent to-transparent from-black opacity-90 absolute top-0 right-0 bottom-0 left-0"></div>
+      </div>
+
+      <div class="hidden md:block z-10 md:w-[65%] lg:w-[60%] pointer-events-none animate-enter lg:translate-x-0 md:-translate-y-10 lg:-translate-y-6 w-[90%] max-w-[1400px] absolute right-0 bottom-0 translate-x-12">
+        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6a0923b7-5355-43e7-b549-91b927ad0783_1600w.jpg" alt="Private Jet" class="select-none opacity-90 mix-blend-screen w-full h-auto object-contain z-20 drop-shadow-2xl" draggable="false" id="heroCarDesktop">
+      </div>
+
+      <div class="flex flex-col z-20 w-full h-full max-w-[1280px] mr-auto ml-auto pt-32 pr-6 pb-20 pl-6 relative justify-center">
+        <div class="animate-enter max-w-xl space-y-10" style="animation-delay: 100ms">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full backdrop-blur border shadow-sm bg-black/50 border-zinc-800/80">
+            <span class="flex text-amber-500">
+              <i data-lucide="star" class="w-3 h-3 fill-current"></i>
+            </span>
+            <span class="text-sm font-medium uppercase tracking-wide text-zinc-300">
+              Apex+ Company of the Year
+            </span>
+          </div>
+
+          <h1 class="md:text-7xl lg:text-8xl leading-[0.9] text-6xl font-light text-white tracking-tight">Private<br class=""> <span class="font-thin text-zinc-500">Flight.</span></h1>
+
+          <p class="md:text-2xl leading-relaxed text-xl font-thin text-zinc-400 max-w-md max-h-fit">
+            We provide a tailored approach to make your flight a seamless and luxurious experience.
+          </p>
+
+          <div class="md:hidden w-full mt-0 mb-0 pr-1 pl-1">
+            <div class="relative w-full aspect-[16/8] overflow-visible pointer-events-none">
+              <img src="https://images.unsplash.com/photo-1583416750470-965b2707b355?q=80&amp;w=1600&amp;auto=format&amp;fit=crop" id="heroCarMobile" alt="Private Jet" class="absolute inset-0 w-full h-full object-contain drop-shadow-2xl scale-[1.7] origin-center mix-blend-screen opacity-90" style="mask-image: linear-gradient(to bottom, black 80%, transparent 100%);">
+            </div>
+          </div>
+
+          <div class="space-y-8">
+            <div class="space-y-6" id="heroServiceSwitcher">
+              <div id="heroTabs" class="relative inline-flex w-full max-w-[520px] bg-zinc-900/80 border border-zinc-800 rounded-full p-0.5 overflow-hidden" role="tablist" aria-label="Choose experience">
+                <span id="heroTabIndicator" class="absolute top-0.5 bottom-0.5 left-0.5 rounded-full bg-zinc-800 shadow-sm transition-[transform,width] duration-300 ease-[cubic-bezier(.22,1,.36,1)]" style="width: 111.38px; transform: translateX(0px);" aria-hidden="true"></span>
+                <button id="heroTab-testdrive" type="button" role="tab" aria-selected="true" data-tab="testdrive" class="hero-tab relative z-10 flex-1 px-4 py-2 text-sm font-normal text-white rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50">
+                  Concierge
+                </button>
+                <button type="button" role="tab" aria-selected="false" data-tab="imola" class="hero-tab z-10 flex-1 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 text-sm font-light text-zinc-500 rounded-full pt-2 pr-4 pb-2 pl-4 relative" id="heroTab-imola">
+                  Charters
+                </button>
+                <button id="heroTab-groups" type="button" role="tab" aria-selected="false" data-tab="groups" class="hero-tab flex-1 transition-colors hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 text-sm font-light text-zinc-500 z-10 rounded-full pt-2 pr-4 pb-2 pl-4 relative">
+                  Corporate
+                </button>
+              </div>
+
+              <div class="relative">
+                <div id="heroPanel-testdrive" role="tabpanel" aria-labelledby="heroTab-testdrive" data-panel="testdrive" class="space-y-2">
+                  <p class="text-base font-medium text-white text-left">Bespoke Travel Solutions</p>
+                  <ul class="text-sm text-zinc-400 space-y-1 font-light">
+                    <li class="">• Curated global destinations</li>
+                    <li class="">• Ground transportation included</li>
+                    <li class="">• 24/7 dedicated personal assistant</li>
+                  </ul>
+                </div>
+                <div id="heroPanel-imola" role="tabpanel" aria-labelledby="heroTab-imola" data-panel="imola" class="space-y-2 hidden">
+                  <p class="text-base font-medium text-white">On-Demand Fleet Access</p>
+                  <ul class="text-sm text-zinc-400 space-y-1 font-light">
+                    <li>• Light to ultra-long-range jets</li>
+                    <li>• Empty leg opportunities</li>
+                    <li>• Transparent, fixed-rate pricing</li>
+                  </ul>
+                </div>
+                <div id="heroPanel-groups" role="tabpanel" aria-labelledby="heroTab-groups" data-panel="groups" class="space-y-2 hidden">
+                  <p class="text-base font-medium text-white">Executive Mobility</p>
+                  <ul class="text-sm text-zinc-400 space-y-1 font-light">
+                    <li>• Multi-leg scheduling efficiency</li>
+                    <li>• Secure and discreet operations</li>
+                    <li>• Flexible catering options</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row sm:items-center gap-5 items-start">
+              <a href="javascript:void(0)" onclick="openBooking()" class="px-8 py-4 rounded-2xl text-base font-medium transition-all hover:scale-[1.02] shadow-xl bg-amber-500 text-black hover:bg-amber-400 shadow-black/50">
+                Book Now
+              </a>
+              <span class="text-sm font-light px-2 flex items-center gap-2 text-zinc-500">
+                <i data-lucide="credit-card" class="w-5 h-5"></i>
+                Secure payment. Instant confirmation.
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden bg-black pt-12 pb-0 relative border-t border-zinc-900" id="journey-section">
+      <script>
+        function updateJourney(stepIndex) {
+            const totalSteps = 4;
+            const progress = (stepIndex / (totalSteps - 1)) * 100;
+            const progressBar = document.getElementById('journey-progress');
+            if (progressBar) progressBar.style.width = `${progress}%`;
+
+            document.querySelectorAll('.journey-step-btn').forEach((btn, idx) => {
+                const indicator = btn.querySelector('.step-indicator');
+                const label = btn.querySelector('.step-label');
+                
+                if (idx === stepIndex) {
+                    indicator.className = 'step-indicator w-12 h-12 rounded-full flex items-center justify-center text-lg font-medium transition-all duration-300 bg-amber-500 text-black shadow-xl shadow-black/50 scale-110 z-20 relative ring-4 ring-zinc-900';
+                    label.className = 'step-label absolute top-16 left-1/2 -translate-x-1/2 text-xs font-medium uppercase tracking-widest text-amber-500 transition-colors duration-300';
+                    btn.setAttribute('aria-selected', 'true');
+                } else if (idx < stepIndex) {
+                    indicator.className = 'step-indicator w-12 h-12 rounded-full flex items-center justify-center text-lg font-medium transition-all duration-300 bg-amber-500 text-black z-20 relative ring-4 ring-zinc-900 opacity-70';
+                    label.className = 'step-label absolute top-16 left-1/2 -translate-x-1/2 text-xs font-normal tracking-widest text-amber-500/70 transition-colors duration-300';
+                    btn.setAttribute('aria-selected', 'false');
+                } else {
+                    indicator.className = 'step-indicator w-12 h-12 rounded-full flex items-center justify-center text-lg font-medium transition-all duration-300 bg-zinc-950 border border-zinc-800 text-zinc-500 hover:border-amber-500 hover:text-amber-500 z-20 relative ring-4 ring-zinc-900 shadow-sm';
+                    label.className = 'step-label absolute top-16 left-1/2 -translate-x-1/2 text-xs font-normal tracking-widest text-zinc-600 transition-colors duration-300';
+                    btn.setAttribute('aria-selected', 'false');
+                }
+            });
+
+            document.querySelectorAll('.journey-content-panel').forEach((panel, idx) => {
+                if (idx === stepIndex) {
+                    panel.classList.remove('hidden', 'opacity-0', 'translate-y-4');
+                    panel.classList.add('block', 'opacity-100', 'translate-y-0');
+                } else {
+                    panel.classList.add('hidden', 'opacity-0', 'translate-y-4');
+                    panel.classList.remove('block', 'opacity-100', 'translate-y-0');
+                }
+            });
+
+            const images = [
+                'https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&w=2160&auto=format&fit=crop',
+                'https://images.unsplash.com/photo-1583416750470-965b2707b355?q=80&w=2160&auto=format&fit=crop',
+                'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=2160&auto=format&fit=crop',
+                'https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?q=80&w=2160&auto=format&fit=crop'
+            ];
+            const imgEl = document.getElementById('journey-main-image');
+            if (imgEl) {
+                imgEl.style.opacity = '0';
+                setTimeout(() => {
+                    imgEl.src = images[stepIndex];
+                    imgEl.onload = () => { imgEl.style.opacity = '1'; };
+                }, 200);
+            }
+        }
+      </script>
+
+      <div class="max-w-[1280px] mx-auto px-6 relative z-10" style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-6">
+          <div class="max-w-xl">
+            <span class="inline-flex items-center gap-2 mb-3">
+              <span class="h-px w-8 bg-amber-500"></span>
+              <span class="text-sm font-medium tracking-widest uppercase text-amber-500">Seamless Process</span>
+            </span>
+            <h2 class="text-4xl md:text-5xl font-medium tracking-tight text-white mb-4">
+              How it Works
+            </h2>
+            <p class="text-zinc-400 text-xl font-thin leading-relaxed max-w-md">
+              From inquiry to touchdown, we handle every detail with absolute precision and discretion.
+            </p>
+          </div>
+
+          <div class="hidden md:flex gap-4">
+            <button onclick="document.getElementById('cars').scrollIntoView({behavior: 'smooth'})" class="group flex items-center gap-2 text-base font-medium text-white hover:text-amber-500 transition-colors">
+              <span>View Fleet</span>
+              <i data-lucide="arrow-right" class="w-5 h-5 group-hover:translate-x-1 transition-transform"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="hidden md:grid lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+          <div class="lg:col-span-6 flex flex-col pt-4">
+            <div class="relative flex justify-between items-center mb-28 mx-4">
+              <div class="pointer-events-none absolute top-6 left-0 w-full h-px bg-zinc-800"></div>
+              <div id="journey-progress" class="pointer-events-none absolute top-6 left-0 h-px bg-amber-500 transition-all duration-500 ease-out" style="width: 0%"></div>
+
+              <button type="button" onclick="updateJourney(0)" class="journey-step-btn group relative focus:outline-none" aria-label="Step 1 Request">
+                <div class="step-indicator w-12 h-12 rounded-full flex items-center justify-center text-lg font-medium transition-all duration-300 bg-amber-500 text-black shadow-sm ring-4 ring-zinc-900 z-20 relative scale-110">1</div>
+                <span class="step-label absolute top-16 left-1/2 -translate-x-1/2 text-xs tracking-widest transition-colors duration-300 whitespace-nowrap text-amber-500 font-medium uppercase">Request</span>
+              </button>
+              <button type="button" onclick="updateJourney(1)" class="journey-step-btn group relative focus:outline-none" aria-label="Step 2 Curate">
+                <div class="step-indicator flex transition-all duration-300 hover:border-amber-500 hover:text-amber-500 text-lg font-medium w-12 h-12 z-20 rounded-full relative items-center justify-center bg-zinc-950 border border-zinc-800 text-zinc-500 shadow-sm ring-4 ring-zinc-900">2</div>
+                <span class="step-label absolute top-16 left-1/2 -translate-x-1/2 text-xs tracking-widest transition-colors duration-300 whitespace-nowrap text-zinc-600 font-normal">Curate</span>
+              </button>
+              <button type="button" onclick="updateJourney(2)" class="journey-step-btn group relative focus:outline-none" aria-label="Step 3 Confirm">
+                <div class="step-indicator w-12 h-12 rounded-full flex items-center justify-center text-lg font-medium transition-all duration-300 hover:border-amber-500 hover:text-amber-500 z-20 relative bg-zinc-950 border border-zinc-800 text-zinc-500 shadow-sm ring-4 ring-zinc-900">3</div>
+                <span class="step-label absolute top-16 left-1/2 -translate-x-1/2 text-xs tracking-widest transition-colors duration-300 whitespace-nowrap text-zinc-600 font-normal">Confirm</span>
+              </button>
+              <button type="button" onclick="updateJourney(3)" class="journey-step-btn group relative focus:outline-none" aria-label="Step 4 Fly">
+                <div class="step-indicator w-12 h-12 rounded-full flex items-center justify-center text-lg font-medium transition-all duration-300 hover:border-amber-500 hover:text-amber-500 z-20 relative bg-zinc-950 border border-zinc-800 text-zinc-500 shadow-sm ring-4 ring-zinc-900">4</div>
+                <span class="step-label absolute top-16 left-1/2 -translate-x-1/2 text-xs tracking-widest transition-colors duration-300 whitespace-nowrap text-zinc-600 font-normal">Fly</span>
+              </button>
+            </div>
+
+            <div class="relative min-h-[360px] overflow-hidden">
+              
+              <div class="journey-content-panel block transition-[transform,opacity] duration-700 ease-[cubic-bezier(.22,1,.36,1)] will-change-transform opacity-100 w-full absolute top-0 right-0 bottom-0 left-0 translate-x-0">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 text-zinc-400 text-[10px] font-medium uppercase tracking-wider mb-6 border border-zinc-800">
+                  <i data-lucide="settings" class="w-3 h-3"></i> Initial Contact
+                </div>
+                <h3 class="text-3xl font-medium mb-4 text-white tracking-tight">Submit your itinerary</h3>
+                <p class="text-zinc-400 text-xl font-thin leading-relaxed mb-8">
+                  Share your desired route, dates, and passenger count. Our team is available 24/7 to receive your request globally.
+                </p>
+                <ul class="space-y-4 mb-8">
+                  <li class="flex items-start gap-3 text-base font-light text-zinc-300">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 mt-0.5 shrink-0"></i>
+                    <span class="">Response within 30 minutes.</span>
+                  </li>
+                  <li class="flex items-start gap-3 text-base font-light text-zinc-300">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 mt-0.5 shrink-0"></i>
+                    <span class="">Completely confidential inquiries.</span>
+                  </li>
+                </ul>
+                <div class="flex items-center gap-4">
+                  <button type="button" onclick="openBooking()" class="hover:bg-amber-400 hover:-translate-y-0.5 transition-all text-base font-medium text-black bg-amber-500 rounded-full pt-3 pr-6 pb-3 pl-6 shadow-lg shadow-black/50 border border-transparent">
+                    Request Quote
+                  </button>
+                </div>
+              </div>
+
+              
+              <div class="journey-content-panel absolute inset-0 w-full hidden transition-[transform,opacity] duration-700 ease-[cubic-bezier(.22,1,.36,1)] will-change-transform translate-x-0 opacity-0">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 text-zinc-400 text-[10px] font-medium uppercase tracking-wider mb-6 border border-zinc-800">
+                  <i data-lucide="shield-check" class="w-3 h-3"></i> Fleet Selection
+                </div>
+                <h3 class="text-3xl font-medium mb-4 text-white tracking-tight">Curated Options</h3>
+                <p class="text-zinc-400 text-xl font-thin leading-relaxed mb-8">
+                  Receive a tailored presentation of available aircraft that perfectly match your range and comfort requirements.
+                </p>
+                <ul class="space-y-4 mb-8">
+                  <li class="flex items-start gap-3 text-base font-light text-zinc-300">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 mt-0.5 shrink-0"></i>
+                    <span>All inclusive pricing, no hidden fees.</span>
+                  </li>
+                  <li class="flex items-start gap-3 text-base font-light text-zinc-300">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 mt-0.5 shrink-0"></i>
+                    <span>Detailed cabin layouts provided.</span>
+                  </li>
+                </ul>
+              </div>
+
+              
+              <div class="journey-content-panel absolute inset-0 w-full hidden transition-[transform,opacity] duration-700 ease-[cubic-bezier(.22,1,.36,1)] will-change-transform translate-x-0 opacity-0">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 text-zinc-400 text-[10px] font-medium uppercase tracking-wider mb-6 border border-zinc-800">
+                  <i data-lucide="user" class="w-3 h-3"></i> Final Details
+                </div>
+                <h3 class="text-3xl font-medium mb-4 text-white tracking-tight">Secure &amp; Personalize</h3>
+                <p class="text-zinc-400 text-xl font-thin leading-relaxed mb-8">
+                  Once an aircraft is selected, we finalize the logistics including bespoke catering, ground transport, and crew briefings.
+                </p>
+                <ul class="space-y-4 mb-8">
+                  <li class="flex items-start gap-3 text-base font-light text-zinc-300">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 mt-0.5 shrink-0"></i>
+                    <span>Preferences saved for future flights.</span>
+                  </li>
+                </ul>
+              </div>
+
+              
+              <div class="journey-content-panel absolute inset-0 w-full hidden transition-[transform,opacity] duration-700 ease-[cubic-bezier(.22,1,.36,1)] will-change-transform translate-x-0 opacity-0">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 text-zinc-400 text-[10px] font-medium uppercase tracking-wider mb-6 border border-zinc-800">
+                  <i data-lucide="flag" class="w-3 h-3"></i> Departure
+                </div>
+                <h3 class="text-3xl font-medium mb-4 text-white tracking-tight">Board &amp; Relax</h3>
+                <p class="text-zinc-400 text-xl font-thin leading-relaxed mb-8">
+                  Arrive at the private terminal just 15 minutes before departure. Step aboard and experience true luxury.
+                </p>
+                <ul class="space-y-4 mb-8">
+                  <li class="flex items-start gap-3 text-base font-light text-zinc-300">
+                    <i data-lucide="check-circle-2" class="w-5 h-5 text-amber-500 mt-0.5 shrink-0"></i>
+                    <span>VIP terminal access globally.</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 h-full min-h-[500px] relative">
+            <svg class="absolute -top-10 -right-10 w-full h-full text-zinc-800 pointer-events-none -z-10" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 350C50 350 100 50 350 50" stroke="currentColor" stroke-width="1.5" stroke-dasharray="8 8"></path>
+            </svg>
+            <div class="w-full h-full rounded-[2rem] overflow-hidden shadow-2xl shadow-black/80 border-2 border-zinc-800 relative group bg-zinc-900">
+              <div class="bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 z-10 absolute top-0 right-0 bottom-0 left-0"></div>
+              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6a0923b7-5355-43e7-b549-91b927ad0783_1600w.jpg" alt="Process Step Image" class="transition-all duration-700 transform group-hover:scale-105 z-10 opacity-80 mix-blend-lighten w-fit h-full object-cover" id="journey-main-image">
+              <div class="absolute bottom-8 left-8 z-20">
+                <div class="backdrop-blur-md bg-black/40 border border-zinc-700/50 rounded-xl p-4 shadow-lg">
+                  <div class="flex items-center gap-3 text-white">
+                    <div class="w-10 h-10 rounded-full bg-amber-500 flex items-center justify-center">
+                      <i data-lucide="play" class="w-4 h-4 text-black ml-0.5 fill-current"></i>
+                    </div>
+                    <div class="">
+                      <p class="text-[10px] font-medium uppercase tracking-wider opacity-70 text-zinc-300">Experience</p>
+                      <p class="text-base font-medium">The Aeroluxe Standard</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="md:hidden space-y-8">
+          <div class="flex items-center gap-2 mb-6 px-1">
+            <span id="journeyMobileCurrent" class="text-sm font-medium text-amber-500">01</span>
+            <div class="h-0.5 flex-1 bg-zinc-800 rounded-full overflow-hidden">
+              <div id="journeyMobileProgress" class="h-full bg-amber-500 transition-[width] duration-300 ease-out" style="width:25%;"></div>
+            </div>
+            <span id="journeyMobileTotal" class="text-sm font-normal text-zinc-600">04</span>
+          </div>
+          <div id="journeyMobileScroller" class="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-8 -mx-6 px-6 no-scrollbar">
+            <div class="journey-mobile-card snap-center shrink-0 w-[85vw] bg-zinc-950 rounded-2xl border border-zinc-800 shadow-xl shadow-black/80 overflow-hidden">
+              <div class="aspect-[4/3] bg-zinc-900 relative">
+                <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&amp;w=800&amp;auto=format&amp;fit=crop" class="w-full h-full object-cover opacity-70 mix-blend-lighten">
+                <div class="absolute top-4 left-4 w-8 h-8 rounded-full bg-black border border-zinc-800 flex items-center justify-center text-sm font-medium shadow-md text-amber-500">1</div>
+              </div>
+              <div class="p-6">
+                <h3 class="text-2xl font-medium tracking-tight mb-2 text-white">Request</h3>
+                <p class="text-base text-zinc-400 font-light mb-6 leading-relaxed">Submit your itinerary for a tailored quote.</p>
+                <button type="button" onclick="openBooking()" class="w-full py-3 rounded-xl border border-zinc-800 text-base font-medium flex items-center justify-center gap-2 hover:bg-zinc-900 text-white transition-colors">Get Quote</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-black border-zinc-900 border-t pt-10 pb-24" id="cars">
+      <div class="max-w-[1280px] mx-auto px-6" style="transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1); opacity: 1; transform: translateY(0px);">
+        <div class="z-30 mb-6 -mx-6 px-6 py-4 glass-panel md:rounded-2xl md:mx-0 border-y md:border flex flex-col md:flex-row justify-between items-center gap-4">
+          <div id="fleetFilterContainer" class="flex items-center gap-2 overflow-x-auto no-scrollbar w-full md:w-auto pb-1 md:pb-0">
+            <button type="button" data-filter="all" class="car-filter active whitespace-nowrap text-sm font-medium text-black bg-amber-500 rounded-lg pt-2 pr-4 pb-2 pl-4 shadow-md transition-colors">All Fleet</button>
+            <button type="button" data-filter="light" class="car-filter whitespace-nowrap hover:border-zinc-600 hover:text-zinc-200 text-sm font-normal text-zinc-400 bg-zinc-950 border-zinc-800 border rounded-lg pt-2 pr-4 pb-2 pl-4 transition-colors">Light Jets</button>
+            <button type="button" data-filter="midsize" class="car-filter whitespace-nowrap px-4 py-2 bg-zinc-950 border border-zinc-800 text-zinc-400 rounded-lg text-sm font-normal hover:border-zinc-600 hover:text-zinc-200 transition-colors">Midsize Jets</button>
+            <button type="button" data-filter="heavy" class="car-filter whitespace-nowrap px-4 py-2 bg-zinc-950 border border-zinc-800 text-zinc-400 rounded-lg text-sm font-normal hover:border-zinc-600 hover:text-zinc-200 transition-colors">Heavy Jets</button>
+          </div>
+          <div class="flex items-center gap-3 w-full md:w-auto justify-between md:justify-end">
+            <p id="carsCount" class="text-sm text-zinc-500 font-light">Showing 4 options</p>
+            <div class="relative">
+              <select id="carsSort" class="pl-3 pr-8 py-2 bg-zinc-950 text-sm font-normal text-zinc-300 border border-zinc-800 rounded-lg focus:ring-1 focus:ring-amber-500 focus:outline-none cursor-pointer transition-colors hover:border-zinc-600">
+                <option value="popular">Sort: Recommended</option>
+                <option value="price_asc">Range: Low to High</option>
+                <option value="price_desc">Range: High to Low</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div id="carsPagerControls" class="mb-4 flex items-center justify-between gap-3">
+          <div class="flex items-center gap-2">
+            <button id="carsPrev" type="button" class="w-10 h-10 rounded-full border border-zinc-800 bg-zinc-950 hover:bg-zinc-900 text-zinc-400 flex items-center justify-center transition disabled:opacity-40" aria-label="Previous">‹</button>
+            <button id="carsNext" type="button" class="w-10 h-10 rounded-full border border-zinc-800 bg-zinc-950 hover:bg-zinc-900 text-zinc-400 flex items-center justify-center transition disabled:opacity-40" aria-label="Next">›</button>
+            <div class="text-sm font-light text-zinc-500 ml-2"><span id="carsPageNow">1</span> / <span id="carsPageTotal">1</span></div>
+          </div>
+          <div id="carsDots" class="flex items-center gap-2"></div>
+        </div>
+
+        <div id="carsPager" class="relative">
+          <div id="carsPages" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth no-scrollbar">
+            <div class="snap-start shrink-0 w-full">
+              <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="fleetGrid">
+                
+                
+                <div class="fleet-item bg-zinc-950 rounded-[2rem] p-2 border border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-black transition-all group relative flex flex-col h-full" data-category="heavy">
+                  <div class="aspect-[4/3] rounded-[1.5rem] bg-zinc-900 overflow-hidden relative mb-4">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/8bdc222c-395b-4538-a55b-241f92df4355_800w.jpg" alt="Jet" class="group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-lighten w-full h-full object-cover">
+                  </div>
+                  <div class="px-4 pb-4 flex flex-col flex-1">
+                    <div class="flex-1">
+                      <div class="flex justify-between items-start mb-2">
+                        <div class="min-w-0">
+                          <h3 class="text-xl font-medium tracking-tight leading-snug h-[3.2rem] overflow-hidden text-white">Global 7500</h3>
+                          <div class="flex flex-wrap items-center gap-2 mt-2 min-h-[1.6rem]">
+                            <span class="text-sm font-light text-zinc-400 bg-black px-2 py-0.5 rounded border border-zinc-800">14 Seats</span>
+                          </div>
+                        </div>
+                        <div class="text-right shrink-0 pl-3">
+                          <span class="text-[10px] text-zinc-500 uppercase tracking-wide">Range</span>
+                          <div class="text-xl font-light text-white">7,700 nm</div>
+                        </div>
+                      </div>
+                      <div class="">
+                        <hr class="border-zinc-800 my-4">
+                        <div class="flex items-center justify-between text-sm font-light text-zinc-400 mb-4">
+                          <span>Hourly Rate</span>
+                          <span class="font-normal text-amber-500">Upon Request</span>
+                        </div>
+                      </div>
+                      <button type="button" onclick="openBooking()" class="car-book w-full py-3 bg-zinc-900 border border-zinc-700 text-white rounded-xl text-base font-normal hover:bg-amber-500 hover:text-black hover:border-transparent transition-colors flex items-center justify-center gap-2">
+                        Inquire
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+            
+                <div class="fleet-item bg-zinc-950 rounded-[2rem] p-2 border border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-black transition-all group relative flex flex-col h-full" data-category="heavy">
+                  <div class="aspect-[4/3] rounded-[1.5rem] bg-zinc-900 overflow-hidden relative mb-4">
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/d389da88-0053-436b-b947-f97697f554a7_800w.jpg" alt="Jet" class="group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-lighten w-full h-full object-cover">
+                  </div>
+                  <div class="px-4 pb-4 flex flex-col flex-1">
+                    <div class="flex-1">
+                      <div class="flex justify-between items-start mb-2">
+                        <div class="min-w-0">
+                          <h3 class="text-xl font-medium tracking-tight leading-snug h-[3.2rem] overflow-hidden text-white">Gulfstream G650</h3>
+                          <div class="flex flex-wrap items-center gap-2 mt-2 min-h-[1.6rem]">
+                            <span class="text-sm font-light text-zinc-400 bg-black px-2 py-0.5 rounded border border-zinc-800">13 Seats</span>
+                          </div>
+                        </div>
+                        <div class="text-right shrink-0 pl-3">
+                          <span class="text-[10px] text-zinc-500 uppercase tracking-wide">Range</span>
+                          <div class="text-xl font-light text-white">7,000 nm</div>
+                        </div>
+                      </div>
+                      <div class="">
+                        <hr class="border-zinc-800 my-4">
+                        <div class="flex items-center justify-between text-sm font-light text-zinc-400 mb-4">
+                          <span class="">Hourly Rate</span>
+                          <span class="font-normal text-amber-500">Upon Request</span>
+                        </div>
+                      </div>
+                      <button type="button" onclick="openBooking()" class="car-book w-full py-3 bg-zinc-900 border border-zinc-700 text-white rounded-xl text-base font-normal hover:bg-amber-500 hover:text-black hover:border-transparent transition-colors flex items-center justify-center gap-2">
+                        Inquire
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div class="fleet-item bg-zinc-950 rounded-[2rem] p-2 border border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-black transition-all group relative flex flex-col h-full" data-category="midsize">
+                  <div class="aspect-[4/3] rounded-[1.5rem] bg-zinc-900 overflow-hidden relative mb-4">
+                    <div class="absolute top-4 left-4 z-10 flex gap-2">
+                      <span class="bg-black/80 border border-zinc-700 backdrop-blur text-amber-500 px-2 py-1 rounded-md text-[10px] font-medium uppercase tracking-wider">Popular</span>
+                    </div>
+                    <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/726b19c5-14ba-4d8a-9830-eb1c82726a59_800w.jpg" alt="Jet" class="group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-lighten w-full h-full object-cover">
+                  </div>
+                  <div class="px-4 pb-4 flex flex-col flex-1">
+                    <div class="flex-1">
+                      <div class="flex justify-between items-start mb-2">
+                        <div class="min-w-0">
+                          <h3 class="text-xl font-medium tracking-tight leading-snug h-[3.2rem] overflow-hidden text-white">Challenger 350</h3>
+                          <div class="flex flex-wrap items-center gap-2 mt-2 min-h-[1.6rem]">
+                            <span class="text-sm font-light text-zinc-400 bg-black px-2 py-0.5 rounded border border-zinc-800">9 Seats</span>
+                          </div>
+                        </div>
+                        <div class="text-right shrink-0 pl-3">
+                          <span class="text-[10px] text-zinc-500 uppercase tracking-wide">Range</span>
+                          <div class="text-xl font-light text-white">3,200 nm</div>
+                        </div>
+                      </div>
+                      <div class="">
+                        <hr class="border-zinc-800 my-4">
+                        <div class="flex items-center justify-between text-sm font-light text-zinc-400 mb-4">
+                          <span>Hourly Rate</span>
+                          <span class="font-normal text-amber-500">Upon Request</span>
+                        </div>
+                      </div>
+                      <button type="button" onclick="openBooking()" class="car-book w-full py-3 bg-zinc-900 border border-zinc-700 text-white rounded-xl text-base font-normal hover:bg-amber-500 hover:text-black hover:border-transparent transition-colors flex items-center justify-center gap-2">
+                        Inquire
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="fleet-item bg-zinc-950 rounded-[2rem] p-2 border border-zinc-800 shadow-sm hover:shadow-2xl hover:shadow-black transition-all group relative flex flex-col h-full" data-category="light">
+                  <div class="aspect-[4/3] rounded-[1.5rem] bg-zinc-900 overflow-hidden relative mb-4">
+                    <img src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?q=80&amp;w=800&amp;auto=format&amp;fit=crop" alt="Jet" class="group-hover:scale-105 transition-transform duration-700 opacity-80 mix-blend-lighten w-full h-full object-cover">
+                  </div>
+                  <div class="px-4 pb-4 flex flex-col flex-1">
+                    <div class="flex-1">
+                      <div class="flex justify-between items-start mb-2">
+                        <div class="min-w-0">
+                          <h3 class="text-xl font-medium tracking-tight leading-snug h-[3.2rem] overflow-hidden text-white">Phenom 300E</h3>
+                          <div class="flex flex-wrap items-center gap-2 mt-2 min-h-[1.6rem]">
+                            <span class="text-sm font-light text-zinc-400 bg-black px-2 py-0.5 rounded border border-zinc-800">7 Seats</span>
+                          </div>
+                        </div>
+                        <div class="text-right shrink-0 pl-3">
+                          <span class="text-[10px] text-zinc-500 uppercase tracking-wide">Range</span>
+                          <div class="text-xl font-light text-white">2,010 nm</div>
+                        </div>
+                      </div>
+                      <div class="">
+                        <hr class="border-zinc-800 my-4">
+                        <div class="flex items-center justify-between text-sm font-light text-zinc-400 mb-4">
+                          <span>Hourly Rate</span>
+                          <span class="font-normal text-amber-500">Upon Request</span>
+                        </div>
+                      </div>
+                      <button type="button" onclick="openBooking()" class="car-book w-full py-3 bg-zinc-900 border border-zinc-700 text-white rounded-xl text-base font-normal hover:bg-amber-500 hover:text-black hover:border-transparent transition-colors flex items-center justify-center gap-2">
+                        Inquire
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-hidden text-white bg-black border-zinc-900 border-t pt-24 pb-24 relative" id="imola">
+      <div class="max-w-[1280px] mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center" style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="">
+          <div class="inline-block px-3 py-1 bg-amber-500/10 text-amber-500 border border-amber-500/20 rounded-full text-[10px] font-medium uppercase tracking-widest mb-6">
+            Elite Access
+          </div>
+          <h2 class="text-4xl md:text-5xl font-medium tracking-tight mb-6">
+            Concierge Service
+          </h2>
+          <p class="text-zinc-400 text-xl font-thin leading-relaxed mb-8 max-w-md">
+            Beyond the flight. Secure reservations at exclusive venues, ground transportation, and tailored experiences globally.
+          </p>
+          <div class="space-y-4 mb-8">
+            <div class="flex items-center gap-4 p-4 bg-zinc-950 rounded-xl border border-zinc-800">
+              <div class="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-5 h-5 text-amber-500"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-normal">Discreet &amp; Secure</h4>
+                <p class="text-sm font-light text-zinc-500">Utmost privacy maintained.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-zinc-950 backdrop-blur rounded-[2rem] p-8 border border-zinc-800 shadow-2xl shadow-black">
+          <div class="flex justify-between items-end mb-8">
+            <div>
+              <span class="text-base font-light text-zinc-400 block mb-1">Membership</span>
+              <span class="text-4xl font-medium">Global</span>
+            </div>
+            <span class="text-xs bg-black px-2 py-1 rounded border border-zinc-800 text-amber-500">Invite Only</span>
+          </div>
+          <ul class="space-y-3 mb-8">
+            <li class="flex items-center gap-3 text-base font-light text-zinc-300">
+              <i data-lucide="check-circle" class="w-5 h-5 text-amber-500"></i>
+              Priority Aircraft Access
+            </li>
+            <li class="flex items-center gap-3 text-base font-light text-zinc-300">
+              <i data-lucide="check-circle" class="w-5 h-5 text-amber-500"></i>
+              Dedicated Flight Director
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="local" class="py-24 bg-black border-t border-zinc-900">
+      <div class="max-w-[1280px] mx-auto px-6" style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="flex justify-between items-end mb-12">
+          <div class="">
+            <h2 class="text-3xl font-medium tracking-tight text-white mb-2">Destinations</h2>
+            <p class="text-base font-light text-zinc-500">Curated routes for the discerning traveler.</p>
+          </div>
+          <a href="#" class="text-sm font-normal text-zinc-400 hover:text-amber-500 flex items-center gap-1 transition-colors">
+            View All
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="group cursor-pointer">
+            <div class="aspect-[16/10] bg-zinc-900 rounded-2xl overflow-hidden mb-3 border border-zinc-800">
+              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/46b75ce9-dd40-40ee-84c0-9c07fed02360_1600w.jpg" class="group-hover:scale-105 transition-transform duration-500 opacity-80 mix-blend-lighten w-full h-full object-cover">
+            </div>
+            <h3 class="text-base font-normal text-white">Monaco</h3>
+            <p class="text-sm font-light text-zinc-500 mb-2">Heli-transfers available.</p>
+          </div>
+          <div class="group cursor-pointer">
+            <div class="aspect-[16/10] bg-zinc-900 rounded-2xl overflow-hidden mb-3 border border-zinc-800">
+              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/09518dfd-8d13-43bf-a4d2-8bd63b569f78_1600w.jpg" class="group-hover:scale-105 transition-transform duration-500 opacity-80 mix-blend-lighten w-full h-full object-cover">
+            </div>
+            <h3 class="text-base font-normal text-white">Geneva</h3>
+            <p class="text-sm font-light text-zinc-500 mb-2">Corporate hub access.</p>
+          </div>
+          <div class="group cursor-pointer">
+            <div class="aspect-[16/10] bg-zinc-900 rounded-2xl overflow-hidden mb-3 border border-zinc-800">
+              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/cab32283-938d-43c3-a005-d29ca4c85603_1600w.jpg" class="group-hover:scale-105 transition-transform duration-500 opacity-80 mix-blend-lighten w-full h-full object-cover">
+            </div>
+            <h3 class="text-base font-normal text-white">Maldives</h3>
+            <p class="text-sm font-light text-zinc-500 mb-2">Long-range luxury.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="max-w-[1280px] mx-auto px-6 py-24 grid md:grid-cols-2 gap-8 border-t border-zinc-900 bg-black">
+      <div class="bg-zinc-950 p-8 rounded-3xl border border-zinc-800" style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+        <div class="w-10 h-10 bg-black border border-zinc-800 rounded-xl flex items-center justify-center mb-6 shadow-sm">
+          <i data-lucide="users" class="w-5 h-5 text-amber-500"></i>
+        </div>
+        <h3 class="text-xl font-medium mb-2 text-white tracking-tight">Corporate Programs</h3>
+        <p class="text-base font-light text-zinc-400 mb-6 leading-relaxed max-w-sm">
+          Custom solutions for enterprise flight departments. Block hours and dedicated fleet management available.
+        </p>
+        <button class="text-base font-normal text-zinc-300 border-b border-zinc-700 pb-0.5 hover:text-amber-500 hover:border-amber-500 transition-colors">
+          Request Details
+        </button>
+      </div>
+
+      <div id="faq" class="space-y-4" style="opacity: 1; transform: translateY(0px); transition: 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+        <h3 class="text-xl font-medium mb-4 text-white tracking-tight">Policies &amp; Information</h3>
+        <details class="group bg-zinc-950 p-4 rounded-xl border border-zinc-800 cursor-pointer transition-all">
+          <summary class="flex justify-between items-center text-base font-normal list-none text-zinc-200">
+            Luggage Allowances
+            <i data-lucide="chevron-down" class="w-4 h-4 transition group-open:rotate-180 text-zinc-500"></i>
+          </summary>
+          <div class="mt-3 text-sm font-light text-zinc-400 leading-relaxed space-y-1">
+            <p>Varies significantly by aircraft type. Light jets typically accommodate soft-sided bags, while heavy jets offer full hold access.</p>
+          </div>
+        </details>
+        <details class="group bg-zinc-950 p-4 rounded-xl border border-zinc-800 cursor-pointer transition-all">
+          <summary class="flex justify-between items-center text-base font-normal list-none text-zinc-200">
+            Catering Options
+            <i data-lucide="chevron-down" class="w-4 h-4 transition group-open:rotate-180 text-zinc-500"></i>
+          </summary>
+          <div class="mt-3 text-sm font-light text-zinc-400 leading-relaxed">
+            Fully bespoke. We partner with elite restaurants and caterers at every departure point to ensure exceptional dining at altitude.
+          </div>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-black text-white py-16 border-t border-zinc-900">
+    <div class="max-w-[1280px] mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-12 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <a href="#" class="text-2xl font-light tracking-tight uppercase mb-6 block text-white">
+            AEROLUXE
+          </a>
+          <p class="text-base font-light text-zinc-500 max-w-sm leading-relaxed">
+            Your sky, your trip. The pinnacle of private aviation luxury.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-normal mb-4 text-sm uppercase tracking-wider text-zinc-600">Contact</h4>
+          <ul class="space-y-2 text-base font-light text-zinc-400">
+            <li>1 Aviation Way</li>
+            <li>Global HQ</li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-normal mb-4 text-sm uppercase tracking-wider text-zinc-600">Legal</h4>
+          <ul class="space-y-2 text-base font-light text-zinc-400">
+            <li><a href="#" class="hover:text-amber-500 transition-colors">Terms of Charter</a></li>
+            <li><a href="#" class="hover:text-amber-500 transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-zinc-900 pt-8 flex justify-between items-center text-sm font-light text-zinc-600">
+        <p>© 2025 EROLUXE. All rights reserved.</p>
+        <div class="flex gap-3 opacity-30 grayscale">
+          <i data-lucide="credit-card" class="w-6 h-6"></i>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div id="booking-overlay" class="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm closed flex justify-end">
+    <div id="booking-panel" class="w-full md:w-[550px] bg-zinc-950 h-full shadow-2xl shadow-black border-l border-zinc-800 flex flex-col overflow-y-auto relative">
+      <div class="sticky top-0 bg-zinc-950/90 backdrop-blur z-20 px-6 py-4 border-b border-zinc-800 flex justify-between items-center">
+        <div>
+          <h2 class="text-xl font-medium tracking-tight text-white" id="modal-car-title">Flight Request</h2>
+          <p class="text-sm font-light text-zinc-500">Provide preliminary details</p>
+        </div>
+        <button onclick="closeBooking()" class="w-8 h-8 rounded-full bg-black border border-zinc-800 hover:bg-zinc-900 flex items-center justify-center transition-colors">
+          <i data-lucide="x" class="w-5 h-5 text-zinc-400"></i>
+        </button>
+      </div>
+
+      <div class="p-6 space-y-8 pb-32">
+        <section>
+          <h3 class="text-sm font-normal uppercase tracking-wider text-zinc-600 mb-3">1. Routing</h3>
+          <div class="space-y-4" style="opacity: 1; transform: translateY(0px);">
+            <input type="text" placeholder="Departure Airport (City or Code)" class="w-full bg-black border border-zinc-800 text-base rounded-xl px-4 py-3 focus:ring-1 focus:ring-amber-500 outline-none text-zinc-200 placeholder:text-zinc-600">
+            <input type="text" placeholder="Destination Airport (City or Code)" class="w-full bg-black border border-zinc-800 text-base rounded-xl px-4 py-3 focus:ring-1 focus:ring-amber-500 outline-none text-zinc-200 placeholder:text-zinc-600">
+          </div>
+        </section>
+
+        <section>
+          <h3 class="text-sm font-normal uppercase tracking-wider text-zinc-600 mb-3">2. Schedule</h3>
+          <div class="grid grid-cols-2 gap-4" style="opacity: 1; transform: translateY(0px);">
+            <input type="date" class="w-full bg-black border border-zinc-800 text-base font-light rounded-xl px-4 py-3 focus:ring-1 focus:ring-amber-500 outline-none text-zinc-200" style="color-scheme: dark;">
+            <select class="w-full bg-black border border-zinc-800 text-base font-light rounded-xl px-4 py-3 focus:ring-1 focus:ring-amber-500 outline-none text-zinc-200">
+              <option>Morning</option>
+              <option>Afternoon</option>
+              <option>Evening</option>
+            </select>
+          </div>
+        </section>
+
+        <section>
+          <h3 class="text-sm font-normal uppercase tracking-wider text-zinc-600 mb-3">3. Preferences</h3>
+          <div class="space-y-3" style="opacity: 1; transform: translateY(0px);">
+            <label class="flex items-center justify-between p-3 border border-zinc-800 bg-black rounded-xl cursor-pointer hover:border-zinc-700 transition-colors">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="accent-amber-500 w-4 h-4 rounded border-zinc-700 bg-zinc-900">
+                <div>
+                  <span class="block text-base font-normal text-zinc-200">Ground Transport</span>
+                  <span class="block text-sm font-light text-zinc-500">Chauffeur service to/from terminal.</span>
+                </div>
+              </div>
+            </label>
+            <label class="flex items-center justify-between p-3 border border-zinc-800 bg-black rounded-xl cursor-pointer hover:border-zinc-700 transition-colors">
+              <div class="flex items-center gap-3">
+                <input type="checkbox" class="accent-amber-500 w-4 h-4 rounded border-zinc-700 bg-zinc-900">
+                <div>
+                  <span class="block text-base font-normal text-zinc-200">Bespoke Catering</span>
+                  <span class="block text-sm font-light text-zinc-500">Dietary requirements and preferences.</span>
+                </div>
+              </div>
+            </label>
+          </div>
+        </section>
+      </div>
+
+      <div class="mt-auto sticky bottom-0 bg-zinc-950 border-t border-zinc-800 p-6 shadow-[0_-10px_30px_rgba(0,0,0,0.8)]">
+        <button class="w-full py-4 bg-amber-500 text-black rounded-xl text-base font-medium hover:bg-amber-400 transition-colors flex items-center justify-center gap-2 shadow-lg shadow-black/50">
+          Submit Request
+          <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <button id="chatToggleBtn" onclick="toggleChat()" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-[70] w-14 h-14 bg-amber-500 hover:bg-amber-400 text-black rounded-full shadow-lg shadow-black/80 flex items-center justify-center transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:ring-offset-2 focus:ring-offset-black" aria-label="Open Chat">
+    <iconify-icon icon="solar:chat-line-linear" width="28" height="28" style="stroke-width: 1.5;"></iconify-icon>
+  </button>
+
+  <div id="chatWindow" class="fixed bottom-24 right-6 md:bottom-28 md:right-8 z-[70] w-[calc(100vw-48px)] sm:w-[350px] bg-zinc-950/95 backdrop-blur-xl border border-zinc-800 rounded-2xl shadow-2xl shadow-black flex flex-col overflow-hidden origin-bottom-right transition-all duration-300 scale-0 opacity-0 pointer-events-none">
+    <div class="bg-zinc-900 px-4 py-3 border-b border-zinc-800 flex justify-between items-center">
+      <div class="flex items-center gap-3">
+        <div class="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></div>
+        <span class="text-sm font-medium text-white tracking-wide">Live Concierge</span>
+      </div>
+      <button onclick="toggleChat()" class="text-zinc-400 hover:text-white transition-colors" aria-label="Close Chat">
+        <iconify-icon icon="solar:close-circle-linear" width="20" height="20"></iconify-icon>
+      </button>
+    </div>
+    <div id="chatBody" class="p-4 h-[300px] overflow-y-auto flex flex-col gap-3 bg-black/50">
+      <div class="text-xs text-center text-zinc-600 font-light mb-2">Today, Just now</div>
+      <div class="bg-zinc-900 border border-zinc-800 rounded-2xl rounded-tl-sm p-3 max-w-[85%] self-start shadow-sm" style="animation: fadeInUp 0.4s ease forwards;">
+        <p class="text-sm font-light text-zinc-200">Welcome to Aeroluxe. How may I assist you with your flight arrangements today?</p>
+      </div>
+    </div>
+    <div class="p-3 bg-zinc-950 border-t border-zinc-800">
+      <div class="relative flex items-center">
+        <input type="text" placeholder="Type a message..." class="w-full bg-zinc-900 border border-zinc-800 rounded-full pl-4 pr-12 py-2.5 text-sm font-light text-white focus:outline-none focus:border-amber-500 focus:ring-1 focus:ring-amber-500 transition-colors placeholder:text-zinc-600">
+        <button class="absolute right-1 w-9 h-9 flex items-center justify-center bg-amber-500 text-black rounded-full hover:bg-amber-400 transition-colors shadow-sm">
+          <iconify-icon icon="solar:plain-linear" width="20" height="20"></iconify-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script>
+    lucide.createIcons({
+      attrs: {
+        'stroke-width': 1.5
+      }
+    });
+    const overlay = document.getElementById('booking-overlay');
+    function openBooking() {
+        document.body.classList.add('modal-open');
+        overlay.classList.remove('closed');
+        overlay.classList.add('open');
+    }
+    function closeBooking() {
+        document.body.classList.remove('modal-open');
+        overlay.classList.remove('open');
+        overlay.classList.add('closed');
+    }
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) closeBooking();
+    });
+    const chatWindow = document.getElementById('chatWindow');
+    function toggleChat() {
+      const isClosed = chatWindow.classList.contains('scale-0');
+      if (isClosed) {
+        chatWindow.classList.remove('scale-0', 'opacity-0', 'pointer-events-none');
+        chatWindow.classList.add('scale-100', 'opacity-100', 'pointer-events-auto');
+      } else {
+        chatWindow.classList.add('scale-0', 'opacity-0', 'pointer-events-none');
+        chatWindow.classList.remove('scale-100', 'opacity-100', 'pointer-events-auto');
+      }
+    }
+    (() => {
+      const filters = document.querySelectorAll('.car-filter');
+      const items = document.querySelectorAll('.fleet-item');
+      const countDisplay = document.getElementById('carsCount');
+
+      filters.forEach(filter => {
+        filter.addEventListener('click', () => {
+          filters.forEach(f => {
+            f.className = "car-filter whitespace-nowrap px-4 py-2 bg-zinc-950 border border-zinc-800 text-zinc-400 rounded-lg text-sm font-normal hover:border-zinc-600 hover:text-zinc-200 transition-colors";
+          });
+          filter.className = "car-filter active whitespace-nowrap text-sm font-medium text-black bg-amber-500 rounded-lg pt-2 pr-4 pb-2 pl-4 shadow-md transition-colors";
+
+          const category = filter.dataset.filter;
+          let count = 0;
+
+          items.forEach(item => {
+            if (category === 'all' || item.dataset.category === category) {
+              item.style.display = 'flex';
+              item.style.animation = 'none';
+              item.offsetHeight;
+              item.style.animation = 'fadeInUp 0.5s ease forwards';
+              count++;
+            } else {
+              item.style.display = 'none';
+            }
+          });
+
+          countDisplay.innerText = `Showing ${count} option${count !== 1 ? 's' : ''}`;
+        });
+      });
+    })();
+    (() => {
+      const tablist = document.getElementById("heroTabs");
+      const indicator = document.getElementById("heroTabIndicator");
+      const tabs = tablist ? Array.from(tablist.querySelectorAll('[role="tab"]')) : [];
+      const panels = Array.from(document.querySelectorAll('#heroServiceSwitcher [role="tabpanel"]'));
+      if (!tablist || !indicator || !tabs.length || !panels.length) return;
+
+      const ACTIVE_TAB = "text-white font-medium";
+      const INACTIVE_TAB = "text-zinc-500 font-light";
+
+      function moveIndicatorToTab(tabEl) {
+        const listRect = tablist.getBoundingClientRect();
+        const tabRect  = tabEl.getBoundingClientRect();
+        indicator.style.width = tabRect.width + "px";
+        indicator.style.transform = `translateX(${tabRect.left - listRect.left}px)`;
+      }
+
+      function setActive(key, focus = false) {
+        tabs.forEach((t) => {
+          const isActive = t.dataset.tab === key;
+          t.setAttribute("aria-selected", isActive ? "true" : "false");
+          t.className = `hero-tab relative z-10 flex-1 px-4 py-2 rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500/50 ${isActive ? ACTIVE_TAB : INACTIVE_TAB}`;
+          if (isActive) {
+            moveIndicatorToTab(t);
+            if (focus) t.focus();
+          }
+        });
+        panels.forEach((p) => p.classList.toggle("hidden", p.dataset.panel !== key));
+      }
+
+      tabs.forEach((t) => {
+        t.addEventListener("click", () => setActive(t.dataset.tab));
+      });
+
+      const onResize = () => {
+        const active = tabs.find((t) => t.getAttribute("aria-selected") === "true") || tabs[0];
+        moveIndicatorToTab(active);
+      };
+      window.addEventListener("resize", onResize, { passive: true });
+
+      requestAnimationFrame(() => {
+        setActive("testdrive");
+        onResize();
+      });
+    })();
+  </script>
+</body></html>

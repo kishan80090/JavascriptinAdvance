@@ -5,22 +5,14 @@
 </head>
 <body>
 
-  <button onclick="getData()">Click to Get Data</button>
-
-  <h3>Response:</h3>
-  <pre id="result"></pre>
-
   <script>
-    function getData() {
-      fetch("https://kishan80090.github.io/jsondata8/data8.json")
-        .then(response => response.json())
-        .then(data => {
-          document.getElementById("result").textContent = JSON.stringify(data, null, 2);
-        })
-        .catch(error => {
-          console.log("Error:", error);
-        });
-    }
+   Promise.all([
+  new Promise((resolve, reject) => {
+    setTimeout(() => resolve(1), 1000)
+  }),
+  2,
+  3
+]).then(alert);
   </script>
 
 </body>

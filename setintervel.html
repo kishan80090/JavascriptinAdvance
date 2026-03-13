@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+<meta charset="UTF-8">
+<title>Quiz Timer</title>
+
+<style>
+#box{
+width:400px;
+padding:20px;
+background:turquoise;
+border-radius:10px;
+}
+
+button{
+margin:5px;
+padding:8px 15px;
+}
+
+#time{
+font-size:30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<h2>Timed Quiz</h2>
+
+<h1 id="time">0</h1>
+
+<div id="box">
+
+<h3 id="question"></h3>
+
+<div id="options"></div>
+
+<p id="result"></p>
+
+</div>
+
+<script>
+
+const questions = [
+{
+question:"What is your name?",
+options:["Kishan","Rahul","Aman","Ravi"],
+answer:"Kishan"
+},
+
+{
+question:"2 + 2 = ?",
+options:["3","4","5","6"],
+answer:"4"
+},
+
+{
+question:"Capital of India?",
+options:["Delhi","Lucknow","Mumbai","Patna"],
+answer:"Delhi"
+},
+
+{
+question:"HTML stands for?",
+options:["Hyper Text Markup Language","High Text Machine Language","Hyper Tool Markup","None"],
+answer:"Hyper Text Markup Language"
+},
+
+{
+question:"JavaScript is?",
+options:["Language","Car","Animal","Food"],
+answer:"Language"
+}
+
+];
+
+let currentQuestion=0;
+let score=0;
+let time=0;
+
+const questionEl=document.getElementById("question");
+const optionsEl=document.getElementById("options");
+const resultEl=document.getElementById("result");
+const timeEl=document.getElementById("time");
+
+function loadQuestion(){
+
+const q=questions[currentQuestion];
+
+questionEl.innerText=q.question;
+
+optionsEl.innerHTML="";
+
+q.options.forEach(option=>{
+
+const btn=document.createElement("button");
+
+btn.innerText=option;
+
+btn.onclick=()=>checkAnswer(option);
+
+optionsEl.appendChild(btn);
+
+})
+}
+
+function checkAnswer(option){
+
+const correct=questions[currentQuestion].answer;
+
+if(option===correct){
+
+resultEl.innerText="Right ✔";
+
+score++;
+
+}
+else{
+resultEl.innerText="Wrong ❌";
+}
+
+}
+
+loadQuestion();
+
+let timer=setInterval(()=>{
+
+time++;
+
+timeEl.innerText=time;
+
+if(time%5===0){
+
+currentQuestion++;
+
+resultEl.innerText="";
+
+if(currentQuestion<questions.length){
+
+loadQuestion();
+
+}else{
+
+clearInterval(timer);
+
+document.getElementById("box").innerHTML=
+"<h2>Quiz Finished</h2><h3>Your Score: "+score+" / "+questions.length+"</h3>";
+
+}
+
+}
+
+},1000);
+
+</script>
+
+</body>
+</html>

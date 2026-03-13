@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button style="width: 250px;height: 40px;font-size: 18px; background-color: lightcoral;" id="btn">Add to Card</button>
+
+    
+    <h1 style="color: red;" id="count"></h1>
+    <h1 id="mess" style="color: green;" ></h1>
+    <script>
+      let button=document.getElementById("btn");
+      let count=0;
+      let dispay=document.getElementById("count");
+      let message=document.getElementById("mess");
+      button.addEventListener("click",function(){
+        count=count+1;
+        if(count<=3){
+        dispay.textContent=count;
+        message.innerHTML="Procust";
+        }
+      })
+    </script>
+</body>
+</html>
